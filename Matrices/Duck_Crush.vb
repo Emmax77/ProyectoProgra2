@@ -3,8 +3,10 @@
     Dim mat(,) As Button
     Dim matAux(,) As Integer
     Dim lista As ArrayList
+    Dim acumPermanente As Integer = 0
+    Dim acumBolitas As Integer = 0
     Private Sub btNuevoJuego_Click(sender As Object, e As EventArgs) Handles btNuevoJuego.Click
-        mostrarMat(hacerMatriz(5, 5))
+        mostrarMat(hacerMatriz(19, 19))
     End Sub
 
     'Funcion para crear una matriz de botones con numeros random
@@ -105,17 +107,45 @@
             Next
         Next
 
+        'coloca nuevamente la matriz matAux en 0 completamente
         For i = 0 To matAux.GetUpperBound(0)
             For j = 0 To matAux.GetUpperBound(1)
                 matAux(i, j) = 0
             Next
         Next
 
+        'Metodo que ordena toda la matriz de arriba a abajo
+        For l = 0 To matEnteros.GetUpperBound(0)
+            For m = 0 To matEnteros.GetUpperBound(1)
+                If (l - 1) >= 0 Then
+                    If matEnteros(l - 1, m) = 0 Then
+                        ordenar(matEnteros)
+                        ordenarB(matEnteros)
+                    End If
+                End If
+            Next
+        Next
 
-        'Metodo que ordena todo la matriz
-        ordenar(matEnteros)
-        'Metodo que genera una nueva matriz de botones validando la de enteros
+        'Metodo que ordena toda la matriz de izquierda a derecha
+        For a = 0 To matEnteros.GetUpperBound(0)
+            For b = 0 To matEnteros.GetUpperBound(1)
+                If (b + 1) <= matEnteros.GetUpperBound(1) Then
+                    If matEnteros(a, b + 1) = 0 Then
+                        ordenarB(matEnteros)
+                    End If
+                End If
+            Next
+        Next
+
+
+        'Metodo que refresca la matriz de botones validando la de enteros
         reducirMatriz(matEnteros)
+
+        'formula que calcula la cantidad de puntos ganados
+        acumPermanente += Math.Pow(2, (acumBolitas / 2))
+        lbPatitosComidos.Text = acumBolitas
+        lbPuntos.Text = acumPermanente
+        acumBolitas = 0
     End Sub
 
     Sub reducirMatriz(matEnteros(,) As Integer)
@@ -140,6 +170,7 @@
         Next
     End Sub
 
+    'ordena la matriz de abajo para arriba
     Sub ordenar(mate(,) As Integer)
         Dim pivote As Integer
         Dim dos As Integer
@@ -161,6 +192,36 @@
                                     End If
                                 End If
                             End If
+                            End If
+                        cont += 1
+                    End If
+                Next
+            End While
+        Next
+
+    End Sub
+
+    'ordena la matriz de izquierda a derecha 
+    Sub ordenarB(mate(,) As Integer)
+        Dim pivote As Integer
+        Dim dos As Integer
+        For i = 0 To mate.GetUpperBound(0)
+            Dim cont As Integer = 0
+            While cont <= mate.GetUpperBound(0)
+                For k = 0 To mate.GetUpperBound(1)
+                    pivote = mate(i, k)
+                    If k <> mate.GetUpperBound(1) Then
+                        dos = mate(i, k + 1)
+                        If pivote = 0 Then
+                            If pivote < dos Then
+                                If pivote <> dos Then
+                                    If k < mate.GetUpperBound(1) Then
+                                        Dim tmp As Integer = mate(i, k + 1)
+                                        mate(i, k + 1) = pivote
+                                        mate(i, k) = tmp
+                                    End If
+                                End If
+                            End If
                         End If
                         cont += 1
                     End If
@@ -169,6 +230,7 @@
         Next
 
     End Sub
+
 
     Sub enteros()
         Dim pruebas As String = ""
@@ -232,6 +294,7 @@
                 If elegido = numeroDelactual Then
                     lista.Add(New Point(f, c))
                     matAux(f, c) = matEnteros(f, c)
+                    acumBolitas += 1
                 End If
             End If
         End If
