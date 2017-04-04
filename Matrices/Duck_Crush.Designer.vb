@@ -24,6 +24,7 @@ Partial Class Duck_Crush
     Private Sub InitializeComponent()
         Me.btNuevoJuego = New System.Windows.Forms.Button()
         Me.plMat = New System.Windows.Forms.Panel()
+        Me.btEnteros = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'btNuevoJuego
@@ -42,11 +43,21 @@ Partial Class Duck_Crush
         Me.plMat.Size = New System.Drawing.Size(810, 679)
         Me.plMat.TabIndex = 1
         '
+        'btEnteros
+        '
+        Me.btEnteros.Location = New System.Drawing.Point(869, 102)
+        Me.btEnteros.Name = "btEnteros"
+        Me.btEnteros.Size = New System.Drawing.Size(75, 23)
+        Me.btEnteros.TabIndex = 2
+        Me.btEnteros.Text = "Ver Enteros"
+        Me.btEnteros.UseVisualStyleBackColor = True
+        '
         'Duck_Crush
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(977, 703)
+        Me.Controls.Add(Me.btEnteros)
         Me.Controls.Add(Me.plMat)
         Me.Controls.Add(Me.btNuevoJuego)
         Me.Name = "Duck_Crush"
@@ -59,4 +70,5 @@ Partial Class Duck_Crush
 
     Friend WithEvents btNuevoJuego As Button
     Friend WithEvents plMat As Panel
+    Friend WithEvents btEnteros As Button
 End Class
