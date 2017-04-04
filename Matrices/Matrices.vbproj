@@ -130,5 +130,14 @@
   <ItemGroup>
     <None Include="Resource\color-negro.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pato-Azul.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pato-Rojo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pato-Verde.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

@@ -1,13 +1,34 @@
 ﻿Public Class Duck_Crush
+    'Variables globales
     Dim matEnteros(,) As Integer
     Dim mat(,) As Button
     Dim matAux(,) As Integer
     Dim lista As ArrayList
     Dim acumPermanente As Integer = 0
     Dim acumBolitas As Integer = 0
+
+    'Botones
     Private Sub btNuevoJuego_Click(sender As Object, e As EventArgs) Handles btNuevoJuego.Click
         mostrarMat(hacerMatriz(19, 19))
     End Sub
+
+    Private Sub btEnteros_Click(sender As Object, e As EventArgs) Handles btEnteros.Click
+        enteros()
+    End Sub
+
+    Private Sub btDificil_Click(sender As Object, e As EventArgs) Handles btDificil.Click
+        mostrarMat(hacerMatriz(19, 14))
+    End Sub
+
+    Private Sub btMedio_Click(sender As Object, e As EventArgs) Handles btMedio.Click
+        mostrarMat(hacerMatriz(14, 14))
+    End Sub
+
+    Private Sub btFacil_Click(sender As Object, e As EventArgs) Handles btFacil.Click
+        mostrarMat(hacerMatriz(14, 9))
+    End Sub
+
+
 
     'Funcion para crear una matriz de botones con numeros random
     Function hacerMatriz(num As Integer, num2 As Integer)
@@ -96,25 +117,11 @@
         End While
 
 
-        'coloca el texto en 0 de cada boton que sea igual alrededor y una imagen color negro
-        For i = 0 To matAux.GetUpperBound(0)
-            For j = 0 To matAux.GetUpperBound(1)
-                If matAux(i, j) > 0 Then
-                    mat(i, j).BackgroundImage = My.Resources.color_negro
-                    mat(i, j).Text = 0
-                    matEnteros(i, j) = 0
-                End If
-            Next
-        Next
+        'coloca el texto en 0 de cada boton que sea igual alrededor y una imagen color negro y reinicia la matriz matAux
+        textoCeroYReinicioAux()
 
-        'coloca nuevamente la matriz matAux en 0 completamente
-        For i = 0 To matAux.GetUpperBound(0)
-            For j = 0 To matAux.GetUpperBound(1)
-                matAux(i, j) = 0
-            Next
-        Next
 
-        'Metodo que ordena toda la matriz de arriba a abajo
+        'Repite varias veces el Metodo que ordena toda la matriz de arriba a abajo
         For l = 0 To matEnteros.GetUpperBound(0)
             For m = 0 To matEnteros.GetUpperBound(1)
                 If (l - 1) >= 0 Then
@@ -126,7 +133,7 @@
             Next
         Next
 
-        'Metodo que ordena toda la matriz de izquierda a derecha
+        'Repite varias veces el Metodo que ordena toda la matriz de izquierda a derecha
         For a = 0 To matEnteros.GetUpperBound(0)
             For b = 0 To matEnteros.GetUpperBound(1)
                 If (b + 1) <= matEnteros.GetUpperBound(1) Then
@@ -146,6 +153,25 @@
         lbPatitosComidos.Text = acumBolitas
         lbPuntos.Text = acumPermanente
         acumBolitas = 0
+    End Sub
+
+    Sub textoCeroYReinicioAux()
+        For i = 0 To matAux.GetUpperBound(0)
+            For j = 0 To matAux.GetUpperBound(1)
+                If matAux(i, j) > 0 Then
+                    mat(i, j).BackgroundImage = My.Resources.color_negro
+                    mat(i, j).Text = 0
+                    matEnteros(i, j) = 0
+                End If
+            Next
+        Next
+
+        For i = 0 To matAux.GetUpperBound(0)
+            For j = 0 To matAux.GetUpperBound(1)
+                matAux(i, j) = 0
+            Next
+        Next
+
     End Sub
 
     Sub reducirMatriz(matEnteros(,) As Integer)
@@ -300,7 +326,5 @@
         End If
     End Sub
 
-    Private Sub btEnteros_Click(sender As Object, e As EventArgs) Handles btEnteros.Click
-        enteros()
-    End Sub
+
 End Class

@@ -118,16 +118,34 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="patoV" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resource\patoV.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Pato-verde-Tansparencia" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pato-verde-Tansparencia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="patoR" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resource\patoR.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="patoA" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resource\patoA.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Pato-Rojo-Tansparencia" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pato-Rojo-Tansparencia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pato-Azzul-Tansparencia" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pato-Azzul-Tansparencia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="color-negro" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resource\color-negro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="patoV" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\patoV.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="patoA" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\patoA.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pato-Azul" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pato-Azul.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pato-Rojo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pato-Rojo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pato-Verde" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pato-Verde.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

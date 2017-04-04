@@ -29,6 +29,9 @@ Partial Class Duck_Crush
         Me.lbPuntos = New System.Windows.Forms.Label()
         Me.lbPatitos = New System.Windows.Forms.Label()
         Me.lbPatitosComidos = New System.Windows.Forms.Label()
+        Me.btDificil = New System.Windows.Forms.Button()
+        Me.btMedio = New System.Windows.Forms.Button()
+        Me.btFacil = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'btNuevoJuego
@@ -37,7 +40,7 @@ Partial Class Duck_Crush
         Me.btNuevoJuego.Name = "btNuevoJuego"
         Me.btNuevoJuego.Size = New System.Drawing.Size(102, 23)
         Me.btNuevoJuego.TabIndex = 0
-        Me.btNuevoJuego.Text = "Nuevo Juego"
+        Me.btNuevoJuego.Text = "Juego Experto"
         Me.btNuevoJuego.UseVisualStyleBackColor = True
         '
         'plMat
@@ -49,7 +52,7 @@ Partial Class Duck_Crush
         '
         'btEnteros
         '
-        Me.btEnteros.Location = New System.Drawing.Point(870, 230)
+        Me.btEnteros.Location = New System.Drawing.Point(854, 427)
         Me.btEnteros.Name = "btEnteros"
         Me.btEnteros.Size = New System.Drawing.Size(75, 23)
         Me.btEnteros.TabIndex = 2
@@ -99,11 +102,41 @@ Partial Class Duck_Crush
         Me.lbPatitosComidos.TabIndex = 6
         Me.lbPatitosComidos.Text = "0"
         '
+        'btDificil
+        '
+        Me.btDificil.Location = New System.Drawing.Point(854, 232)
+        Me.btDificil.Name = "btDificil"
+        Me.btDificil.Size = New System.Drawing.Size(102, 23)
+        Me.btDificil.TabIndex = 7
+        Me.btDificil.Text = "Juego Dificil"
+        Me.btDificil.UseVisualStyleBackColor = True
+        '
+        'btMedio
+        '
+        Me.btMedio.Location = New System.Drawing.Point(854, 280)
+        Me.btMedio.Name = "btMedio"
+        Me.btMedio.Size = New System.Drawing.Size(102, 23)
+        Me.btMedio.TabIndex = 8
+        Me.btMedio.Text = "Juego Medio"
+        Me.btMedio.UseVisualStyleBackColor = True
+        '
+        'btFacil
+        '
+        Me.btFacil.Location = New System.Drawing.Point(854, 327)
+        Me.btFacil.Name = "btFacil"
+        Me.btFacil.Size = New System.Drawing.Size(102, 23)
+        Me.btFacil.TabIndex = 9
+        Me.btFacil.Text = "Juego Facil"
+        Me.btFacil.UseVisualStyleBackColor = True
+        '
         'Duck_Crush
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1231, 703)
+        Me.Controls.Add(Me.btFacil)
+        Me.Controls.Add(Me.btMedio)
+        Me.Controls.Add(Me.btDificil)
         Me.Controls.Add(Me.lbPatitosComidos)
         Me.Controls.Add(Me.lbPatitos)
         Me.Controls.Add(Me.lbPuntos)
@@ -127,4 +160,7 @@ Partial Class Duck_Crush
     Friend WithEvents lbPuntos As Label
     Friend WithEvents lbPatitos As Label
     Friend WithEvents lbPatitosComidos As Label
+    Friend WithEvents btDificil As Button
+    Friend WithEvents btMedio As Button
+    Friend WithEvents btFacil As Button
 End Class
