@@ -111,7 +111,7 @@
         Dim numeroPatoElegido As Integer = matEnteros(fila, columna)
         lista = New ArrayList
         lista.Add(New Point(fila, columna))
-        'MessageBox.Show(lista(0).ToString) posicion x y y de el boton
+        'MessageBox.Show(lista(0).ToString)
         While lista.Count > 0
             examinaPosicionesAlrededor()
         End While
@@ -127,7 +127,6 @@
                 If (l - 1) >= 0 Then
                     If matEnteros(l - 1, m) = 0 Then
                         ordenar(matEnteros)
-                        ordenarB(matEnteros)
                     End If
                 End If
             Next
@@ -218,7 +217,7 @@
                                     End If
                                 End If
                             End If
-                            End If
+                        End If
                         cont += 1
                     End If
                 Next
